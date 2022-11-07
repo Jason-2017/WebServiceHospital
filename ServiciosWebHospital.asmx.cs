@@ -17,10 +17,14 @@ namespace WebServiceHospital
     public class ServiciosWebHospital : System.Web.Services.WebService
     {
 
-        [WebMethod]
-        public string HelloWorld()
+        //[WebService(Description = "verificar si el paciente (afiliado al seguro médico) se encuentra activo")]
+        [WebMethod(Description = "verificar si el paciente (afiliado al seguro médico) se encuentra activo")]
+        public string HelloWorld(   string nitProveedor,
+                                    string codigoPaciente,
+                                    DateTime fechaNacimiento,
+                                    DateTime fechaInicioCobertura )
         {
-            return "Hola a todos";
+            return nitProveedor;
         }
     }
 }
